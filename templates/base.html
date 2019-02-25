@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pythonistacafe world map - {% block title%}{% endblock %}</title>
+</head>
+<body>
+    <h1>Pythonistacafe world map</h1>
+
+    <form method="post">
+        <label for="location">Location</label>
+        <input name="location" id="location" required>
+        <input type="submit" value="Add location">
+    </form>
+    <!--<iframe id="map_1"></iframe>-->
+    {% autoescape on %}
+        {{ map_ }}
+
+    {% endautoescape %}
+
+</body>
+</html>
+<!--
+<script>
+    document.getElementById("map_1").srcdoc="{{map_}}";
+</script>
+-->
